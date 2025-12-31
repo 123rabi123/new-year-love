@@ -97,3 +97,23 @@ button:hover {
     opacity: 0;
   }
 }
+.cats {
+  margin-top: 20px;
+  font-size: 40px;
+}
+
+.cat {
+  display: inline-block;
+  margin: 5px;
+  animation: bounce 1.5s infinite;
+  cursor: pointer;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
