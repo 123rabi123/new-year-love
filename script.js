@@ -19,3 +19,16 @@ function showLove() {
     heartsContainer.appendChild(heart);
   }
 }
+function createFirework() {
+  const fw = document.createElement("div");
+  fw.classList.add("firework");
+
+  fw.style.left = Math.random() * 100 + "vw";
+  fw.style.top = Math.random() * 50 + "vh";
+
+  document.body.appendChild(fw);
+
+  setTimeout(() => {
+    fw.remove();
+  }, 1500);
+}
