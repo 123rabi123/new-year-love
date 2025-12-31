@@ -1,4 +1,7 @@
 function showLove() {
+  for (let i = 0; i < 8; i++) {
+  createFirework();
+  }
   const msg = document.getElementById("loveMsg");
   msg.style.display = "block";
   msg.innerHTML = "💌 Tum meri zindagi ki sabse cute billi ho 😻🐱❤️";
