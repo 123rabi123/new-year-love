@@ -2,6 +2,7 @@ function showLove() {
   for (let i = 0; i < 8; i++) {
   createFirework();
   }
+  document.getElementById("quiz").style.display = "block";
   const msg = document.getElementById("loveMsg");
   msg.style.display = "block";
   msg.innerHTML = "💌 Tum meri zindagi ki sabse cute billi ho 😻🐱❤️";
@@ -32,3 +33,14 @@ function createFirework() {
     fw.remove();
   }, 1500);
 }
+function yesLove() {
+  document.getElementById("quizResult").innerHTML =
+    "😍 Mujhe pata tha! Tum meri hi ho ❤️🐱🎆";
+}
+
+const noBtn = document.getElementById("noBtn");
+
+noBtn.addEventListener("mouseover", () => {
+  noBtn.style.left = Math.random() * 100 - 50 + "px";
+  noBtn.style.top = Math.random() * 50 - 25 + "px";
+});
