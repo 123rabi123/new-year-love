@@ -1,12 +1,18 @@
 function showLove() {
-  const messages = [
-    "Tum meri zindagi ka sabse khoobsurat hissa ho ❤️",
-    "Tumhare bina New Year adhura lagta hai 😘",
-    "Tum meri har muskurahat ki wajah ho 😊",
-    "I love you more than momos 😜❤️",
-    "Tum ho to har din festival jaisa lagta hai 🎉💖"
-  ];
+  const msg = document.getElementById("loveMsg");
+  msg.style.display = "block";
+  msg.innerHTML = "💌 Tum meri zindagi ki sabse cute billi ho 😻🐱❤️";
 
-  const randomMsg = messages[Math.floor(Math.random() * messages.length)];
-  document.getElementById("loveMsg").innerText = randomMsg;
+  // ❤️ Hearts create
+  const heartsContainer = document.querySelector(".hearts");
+  heartsContainer.innerHTML = "";
+
+  for (let i = 0; i < 20; i++) {
+    const heart = document.createElement("div");
+    heart.classList.add("heart");
+    heart.innerHTML = "❤️";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.animationDuration = (Math.random() * 3 + 3) + "s";
+    heartsContainer.appendChild(heart);
+  }
 }
